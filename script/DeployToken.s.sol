@@ -11,7 +11,6 @@ contract DeployToken is Script {
         address owner = vm.envAddress("TOKEN_OWNER");
         vm.startBroadcast(pk);
 
-        // Deploy the token, passing msg.sender as owner
         MyToken token = new MyToken(owner);
 
         vm.stopBroadcast();
