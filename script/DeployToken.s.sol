@@ -6,11 +6,7 @@ import {Script} from "../lib/forge-std/src/Script.sol";
 import {console} from "forge-std/console.sol";
 
 contract DeployToken is Script {
-
-
     function run() public {
-
-
         uint256 pk = vm.envUint("PRIVATE_KEY");
         address owner = vm.envAddress("TOKEN_OWNER");
         vm.startBroadcast(pk);
